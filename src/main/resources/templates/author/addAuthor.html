@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{layout/layout :: layout (~{::main})}">
+
+<body>
+
+<main role="main" id="main">
+    <div class="container bg-light border rounded-3 h-100 p-5">
+        <h3><span class="badge badge-color">Add New Author</span></h3>
+
+        <form th:action="@{/author/create}" class="pt-5" th:object="${newAuthor}" th:method="post" >
+
+            <div class="row">
+                <div class="col-md-6 d-flex mb-3">
+                    <label for="name" class="col-sm-3 col-form-label">Name</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="name" th:field="*{name}" />
+                    </div>
+                </div>
+
+                <div class="col-md-6 d-flex mb-3">
+                    <label for="gender" class="col-sm-3 col-form-label">Gender</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="gender" th:field="*{gender}" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 d-flex mt-3 justify-content-end">
+                    <button type="submit" class="btn btn-outline-primary w-25">Add Author</button>
+                </div>
+            </div>
+
+
+        </form>
+    </div>
+</main>
+
+
+
+</body>
+</html>

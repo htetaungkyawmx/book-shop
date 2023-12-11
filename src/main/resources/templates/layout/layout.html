@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" th:fragment="layout (content)" xml:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/head.html :: head}"></head>
+<body>
+      <header th:replace="~{fragments/header.html :: header}"></header>
+
+      <div class="column w-100 mt-5 pt-2">
+
+          <main th:replace="${content}"></main>
+          <footer th:replace="~{fragments/footer.html :: footer}"></footer>
+      </div>
+
+</body>
+</html>
