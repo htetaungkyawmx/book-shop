@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:sqlserver://DESKTOP-LAAE5CE:1433;databaseName=shopdb;encrypt=true;trustServerCertificate=true;
+    url: jdbc:sqlserver://DESKTOP-LAAE5CE:1433;databaseName=SHOP_DB;encrypt=true;trustServerCertificate=true;
     username: sa
     password: htet
   jpa:
